@@ -1,7 +1,3 @@
-#   Python file containing the processing logic for FER analysis tasks
-#   returns a video stream and a json array of probabilities
-#   Author: Ronja Rehm
-
 import cv2
 import numpy as np
 import json as json

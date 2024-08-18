@@ -8,14 +8,6 @@ import sys
 sys.path.insert(0, os.path.abspath('..'))
 
 
-# -- Project information -----------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
-
-project = 'Multimodal Emotion Detection'
-copyright = '2022, Ronja Rehm and Jan Kühlborn. Licensed under the MIT License'
-author = 'Ronja Rehm, Jan Kühlborn'
-release = 'V1'
-
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 

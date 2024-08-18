@@ -1,7 +1,3 @@
-#   Python file containing the processing logic for SER analysis tasks
-#   returns an array of class probabilities
-#   Author: Jan Kühlborn
-
 from tensorflow import keras
 import numpy as np
 import librosa
