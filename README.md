@@ -14,11 +14,11 @@ Our system boasts robust performance, with high accuracy and reliability in reco
 
 Two separate models (audio and video) predict the emotion in parallel. The final class prediction is a weighted and combined "multimodal" prediction of the two seperate predictions.
 
-## Training 📉
+## Training 
 
- - CNN as chosen models for audio and video analyzing
+ - CNN - chosen model for audio and video analyzing
 	
- - Audio:🎧
+ - Audio:
 	 - datasets:
 		- <a href="https://zenodo.org/record/1188976">Ryerson Audio-Visual Database of Emotional Speech and Song (Ravdess)<a>
 		- <a href="https://github.com/CheyneyComputerScience/CREMA-D">Crowd Sourced Emotional Multimodal Actors Dataset (CREMA-D)<a>
