@@ -10,16 +10,6 @@ The objective of this project is to train and deploy a microservice that detects
 
 Two separate models (audio and video) predict the emotion in parallel. The final class prediction is a weighted and combined "multimodal" prediction of the two seperate predictions.
 
-## Overview 👓
-
-<a href="https://github.com/wintechis/emotion-detection-and-reaction/tree/main/SER">Train model Audio<a>
-	
-<a href="https://github.com/wintechis/emotion-detection-and-reaction/tree/main/FacialEmotion">Train model Video<a>
-	
-<a href="https://github.com/wintechis/emotion-detection-and-reaction/tree/main/webapp/models">h5 files<a> 
-	
-<a href="https://github.com/wintechis/emotion-detection-and-reaction/tree/main/webapp">Webapp<a> 
-
 ## Training 📉
 
  - CNN as chosen models for audio and video analyzing
