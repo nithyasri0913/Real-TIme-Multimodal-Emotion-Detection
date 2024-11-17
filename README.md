@@ -58,9 +58,9 @@ Two separate models (audio and video) predict the emotion in parallel. The final
 	- feature sets: 
 	- improved by: Flatten, Dropout
 	
-## Deployment Tech Stack💻
+## Tech Stack
 
- - models trained using tensorflow and jupyter notebooks
+ - models trained using tensorflow in jupyter notebook
  - real-live graphs shown using highcharts.js and Ajax 
  - Webapp built with Flask
 	
@@ -72,7 +72,7 @@ Two separate models (audio and video) predict the emotion in parallel. The final
 	- Python
 	- Keras
 	- Numpy
-	- CV2
+	- OpenCV
 	- Pyaudio
 	- Librosa
 
@@ -90,17 +90,17 @@ Two separate models (audio and video) predict the emotion in parallel. The final
  
  - both models can be used standalone or together
 	
- - Audio:🎧
+ - Audio:
 	- analyzing audio
 	- displaying probability of each emotion as a real-time updating bar chart
- - Video: 📽️
+ - Video: 
 	- analyzing video and face
 	- displaying probability of each emotion as a real-time updating bar chart
- - Multimodal: 🎧📽️
+ - Multimodal: 
 	- analyzing audio and video
-	- displaying video and audio probability of each emotion as a real-time updating bubble chart (no multimodality yet!)
+	- displaying video and audio probability of each emotion as a real-time updating bubble chart 
 	- combined value (70-30)
-	- reaction to human by displaying emoji of predicted emotion (multimodality used!)
+	- predicted emotion displayed using emojis 
 	
 ## Results
 
