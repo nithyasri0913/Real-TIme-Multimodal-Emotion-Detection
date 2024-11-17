@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    {% include 'includes/_navbar.html' %}
+    <title>Real Time Multimodal Emotion Detection</title>
+</head>
+
+<body style="background-color:#002147" onload="updateImage();">
+
+
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-sm-8">
+                <h3 class="mt-5"><font color="white" style="font-family:verdana;" style="font-size:300%;"> Video
+                    Recognition</font></h3>
+                <img src="{{ url_for('video_feed') }}" width="100%">
+            </div>
+            <div class="col-sm-4 align-self-center" style="margin: 100px 0px">
+                <div>
+                    <script>
+                        window.onload = function () {
+                            var emotion = document.getElementById("emotion");
+                            function updateImage() {
+                                emotion.src = emotion.src.split("?")[0] + "?" + new Date().getTime();
+                            }
+                            setInterval(updateImage, 2000);
+                        }
+                    </script>
+                    <img id="emotion" src="/multi_emotion" alt="Emotion"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="container-fluid">
+    <!-- Example row of columns -->
+    <div class="row">
+
+        <div class="container-fluid" id="data-container_multi"></div>
+
+    </div>
+</div>
+<hr>
+
+
+</div> <!-- /container -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/highcharts-more.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+<script src="/static/graph_multi.js"></script>
+<script src="/static/emoji.js"></script>
+
+
+</body>
+</html>

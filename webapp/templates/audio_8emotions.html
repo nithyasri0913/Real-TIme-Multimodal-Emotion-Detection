@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SER live Demo</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    {% include 'includes/_navbar.html' %}
+</head>
+
+
+<body style="background-color:#002147" onload="updateImage();">
+
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-8">
+                <h3 class="mt-5"><font color="white" style="font-family:verdana;" style="font-size:300%;"> Speech
+                    Recognition Model. Updates every 3 seconds.</font></h3>
+                <div class="container-fluid" id="data-container"></div>
+            </div>
+            <div class="col-4 align-self-center">
+                <img id="emotion" src="/emotion8" alt="Emotion"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6"><img id="img" src="/spectrogram" alt="Spectrogram"/></div>
+            <div class="col-6"><img id="plots" src="/waveplot" alt="Waveplot"/></div>
+        </div>
+    </div>
+
+
+<script>
+    window.onload = function () {
+        var image = document.getElementById("img");
+        var plots = document.getElementById("plots");
+        var emotion = document.getElementById("emotion");
+
+        function updateImage() {
+            image.src = image.src.split("?")[0] + "?" + new Date().getTime();
+            plots.src = plots.src.split("?")[0] + "?" + new Date().getTime();
+            emotion.src = emotion.src.split("?")[0] + "?" + new Date().getTime();
+        }
+        setInterval(updateImage, 3000);
+    }
+</script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/highcharts-more.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+<script src="/static/graph_audio_8.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5 text-center">
+            <h1 class="display-5 fw-bold">Welcome to our emotion classifier</h1>
+            <p class="fs-4">This demonstrator shows deployed convolutional neural network (CNN) based machine learning
+                algorithms to analyze your webcam and microphone stream.</p>
+            <a class="btn btn-primary btn-lg" onclick="href='{{ url_for('audio') }}'" type="button">Audio Analysis</a>
+            <a class="btn btn-primary btn-lg" onclick="href='{{ url_for('video') }}'" type="button">Video Analysis</a>
+            <a class="btn btn-primary btn-lg" onclick="href='{{ url_for('multimodal') }}'" type="button">Multimodal
+                Analysis</a>
+        </div>
+    </div>
+{% endblock %}

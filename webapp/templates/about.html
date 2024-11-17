@@ -1,0 +1,125 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5 text-center">
+            <h1 class="display-5 fw-bold">About this project</h1>
+            <p class="fs-5 text-break">This project was developed by two students Ronja Rehm and Jan Kühlborn from the
+                Friedrich-Alexander-University Erlangen-Nürnberg (FAU) for the seminar
+                <a href="https://www.ti.rw.fau.de/courses/hot-topics-in-web-technologies-and-the-internet-of-things/"
+                   class="stretched-link text-danger" style="position: relative;">Hot Topics in Web Technologies and the
+                    Internet of Things</a>
+            </p>
+            <p class="fs-5 text-break">The goal of our topic was to develop a microservice that detects the
+                current emotion of a user based on his voice and facial expression. A camera-based application for
+                multimodal emotion detection from voice and facial expression shall be the presented at the end of the
+                semester.
+            <p class="fs-5 text-break"> We found a way to analyze an audio and video stream in Python, find
+                suitable features for the emotion recognition and train neural networks detecting emotion. Research has
+                shown that convolutional neural networks (CNNs) achieve the best accuracies and
+                performances for both streams.
+                Still, due to the very different input forms, we decided to train two separate models whose predictions
+                are then combined.
+
+            <p class="fs-5 text-break">In the following, we'll list more information about our trained models. More
+                information can also be retrieved from our <a
+                        href="https://github.com/wintechis/emotion-detection-and-reaction/blob/main/README.md"
+                        class="stretched-link text-danger" style="position: relative;">GitHub Repository</a>.</p>
+        </div>
+    </div>
+
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5 text-left">
+            <h1 class="display-5 fw-bold">Audio Model</h1>
+            <p class="fs-5 text-break">Python and Jupyter Notebook was used for training the model. The dataset consists
+                of 8 x 652 audio files
+                which are recorded by professional voice actors. 4 Emotions of the 8 provided are taken
+                into account for training the model.</p>
+            <p class="fs-5 text-break"> The validated accuracy was 91% with a validated loss of 0.4.
+            </p>
+
+            <img src="../static/images_about/audio_model_acc.png" alt="accuracy">
+
+            <br><br><br>
+
+            <p class="fs-5 text-break"> The confusion matrix displays the binary classification.
+            </p>
+
+            <img src="../static/images_about/audio_cm.png" alt="confusionmatrix">
+        </div>
+    </div>
+
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5 text-left">
+            <h1 class="display-5 fw-bold">Video Model</h1>
+            <p class="fs-5 text-break">
+                Python and Jupyter Notebook was used for training the model. The dataset consists of 981 48 x 48 images
+                which are face-frontal and are extracted from video sequences. 4 Emotions of the 7 provided are taken
+                into account for training the model.
+            </p>
+            <br>
+            <p class="fs-5 text-break"> Content of model:
+            </p>
+            <img src="../static/images_about/trained_model.png" alt="trained model">
+
+            <br><br><br>
+
+            <p class="fs-5 text-break"> The validated accuracy was 97% with a validated loss of 0.11.
+            </p>
+
+            <img src="../static/images_about/video_model_acc.png" alt="accuracy">
+            <img src="../static/images_about/video_model_loss.png" alt="loss">
+
+            <br><br><br>
+
+            <p class="fs-5 text-break"> The confusion matrix displays the binary classification.
+            </p>
+
+            <img src="../static/images_about/video_cm.png" alt="confusionmatrix">
+        </div>
+    </div>
+
+    <div class="p-5 mb-4 bg-light rounded-5">
+        <div class="container-fluid py-7">
+            <h1 class="display-6 fw-bold">licenses and citations</h1>
+            <p class="fs-6 text-break">The project is licensed under the MIT License, Copyright (c) 2022 Chair of
+                Technical Information Systems, Friedrich-Alexander-University. The data that we used to train our models
+                is free to download on Kaggle and the
+                websites of their respective research institutes.</p>
+            <p class="fs-6 text-break">Audio Data:</p>
+            <ul>
+                <li>The Ryerson Audio-Visual Database of Emotional Speech and Song (RAVDESS),
+                    released under a Creative Commons Attribution license: <a
+                            href="https://zenodo.org/record/1188976">source</a></li>
+                <li>Toronto emotional speech set (TESS),
+                    this collection is published under Creative Commons license Attribution-NonCommercial-NoDerivatives
+                    4.0 International: <a
+                            href="https://tspace.library.utoronto.ca/handle/1807/24487">source</a></li>
+                <li>Surrey Audio-Visual Expressed Emotion (SAVEE) Database,
+                    available free of charge for research purposes: <a
+                            href="http://kahlan.eps.surrey.ac.uk/savee/Download.html">source</a></li>
+                <li>(Berlin Database of Emotional Speech,
+                    no license: <a
+                            href="http://emodb.bilderbar.info/docu/#download">source</a>) - not used
+                </li>
+                <li>(The Crowd-sourced Emotional Mutimodal Actors Dataset (CREMA-D) is made available under the <a
+                        href="http://opendatacommons.org/licenses/odbl/1.0/"> Open Database License.</a> Any rights in
+                    individual contents of the database are licensed under the Database Contents License:
+                    http://opendatacommons.org/licenses/dbcl/1.0/
+                    <a href="https://github.com/CheyneyComputerScience/CREMA-D"> source</a>) - not used
+                </li>
+            </ul>
+            <p class="fs-6 text-break">Video Data:</p>
+            <ul>
+                <li>CK+48 5 emotions, released under MIT License Copyright (c) 2018 WuJie: <a
+                        href="https://github.com/WuJie1010/Facial-Expression-Recognition.Pytorch/tree/master/CK%2B48">source</a>
+                </li>
+            </ul>
+            <div>
+                <p>All emojis designed by <a href="https://openmoji.org/">OpenMoji</a> – the open-source emoji and icon
+                    project. License: <a
+                            href="https://creativecommons.org/licenses/by-sa/4.0/#">CC BY-SA 4.0</a></p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

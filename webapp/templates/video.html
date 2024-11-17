@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% include 'includes/_navbar.html' %}
+    <title>Real Time Emotion Detection</title>
+</head>
+
+<body style="background-color:#002147;">
+<div class="parallax-content baner-content" id="home">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8  offset-lg-2">
+                <h3 class="mt-5"><font color="white" style="font-family:verdana;" style="font-size:300%;"> Video Recognition</font></h3>
+                <img src="{{ url_for('video_feed') }}" width="100%">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div class="container-fluid" id="data-container_video"></div>
+
+    </div>
+</div>
+<hr>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/highcharts-more.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+<script src="/static/graph_video.js"></script>
+
+</body>
+</html>
