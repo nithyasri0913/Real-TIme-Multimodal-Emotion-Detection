@@ -2,9 +2,13 @@
 
 
 
-## Objective
+## Summary
 
-The objective of this project is to train and deploy a microservice that detects the current emotion of a user based on his voice and facial expression from a webcam and microphone inputs.
+Multimodal emotion recognition was performed by integrating voice and facial expression analysis techniques. Leveraging Short-Time Fourier Transform (STFT) and Mel-Frequency Cepstral Coefficients (MFCC) from Librosa for audio processing, alongside OpenCV for facial expression analysis from video inputs, we developed a robust system. Additionally, we incorporated decision-level fusion techniques to combine the outputs from both modalities effectively, ensuring comprehensive emotion recognition.
+
+This fusion of techniques from computer vision and deep learning enables our system to effectively understand human emotions. The STFT and MFCC techniques capture temporal variations and spectral characteristics in audio signals, while OpenCV facilitates facial landmark detection and expression analysis from video inputs.
+
+Our system boasts robust performance, with high accuracy and reliability in recognizing diverse emotional states. Through meticulous integration and fusion of multimodal information, we achieve enhanced emotion recognition capabilities. With potential applications in conversational agents, recommendation systems, smart homes, and beyond, our work contributes to the advancement of emotion recognition in artificial intelligence.
 
 ## Methodology 
 
