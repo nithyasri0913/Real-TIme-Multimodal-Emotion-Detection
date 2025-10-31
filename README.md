@@ -38,7 +38,7 @@ Two separate models (audio and video) predict the emotion in parallel. The final
  	- feature sets: Zero Crossing Rate, Chroma, MFCC, Root Mean Square Value, MelSpectrogram
  	- improved by augmentation techniques: added noise, streched, shifted and pitched audio files (see jupyter training files for more details)
 	
-- Video: 📽️
+- Video:
 	- dataset: <a href="https://www.kaggle.com/datasets/gauravsharma99/ck48-5-emotions">CK+48 5 emotions<a> (used 4 of them)
 	
 		| Emotion  | Number of Images |
